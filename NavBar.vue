@@ -17,7 +17,10 @@ export default{
             
         }
 
-        return {logged, logout}
+        return {
+            logged,
+            logout
+        }
         
     }
 

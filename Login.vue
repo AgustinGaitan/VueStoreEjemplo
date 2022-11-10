@@ -15,8 +15,7 @@ export default{
         const login = (obj) =>{
             store.commit('login',obj);
         }
-        
-
+    
         return {
             logged,
             login
@@ -34,14 +33,10 @@ export default{
     },
     computed: {
 
-        computedCondition() {
-
-            //El botón se disablea cuando no esta completo el formulario.
-
+        computedCondition(){
             return (this.usuario 
             && this.pwd 
             && this.notarobot);
-
         },
 
     },
@@ -68,9 +63,7 @@ export default{
 
 <template>
     <div id="login-container" class="d-flex justify-content-center align-items-center" >
-        <div class="login">
-            
-
+        <div class="login">           
             <h1 class="text-center">Hola!</h1>
                 <form>
                     <div class="form-group">
@@ -95,7 +88,6 @@ export default{
                         <button type="button" :disabled="!computedCondition" class="btn btn-success w-80 bg-white text-dark" @click="LoginSubmit()">Aceptar</button>
                     </div>
                 </form>
-
         </div>
     </div>
 </template>
